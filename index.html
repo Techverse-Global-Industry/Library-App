@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="app.js" defer></script>
+    <script src="dom.js" defer></script>
+    <title>Library App</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="header">
+        <h1>Welcome to the Library App</h1>
+        <p>This is a simple library application.</p>
+      </div>
+
+      <form action="" id="addBookForm" onsubmit="handleAddBook(event)">
+        <fieldset>
+          <legend>Add a book</legend>
+          <div class="form-group">
+            <label for="search">ISBN:</label>
+            <input
+              type="text"
+              id="isbnInput"
+              name="isbnInput"
+              placeholder="Enter book ISBN"
+            />
+          </div>
+          <div class="form-group">
+            <label for="search">Title:</label>
+            <input
+              type="text"
+              id="titleInput"
+              name="titleInput"
+              placeholder="Enter book title or author"
+            />
+          </div>
+          <div class="form-group">
+            <label for="search">Author:</label>
+            <input
+              type="text"
+              id="authorInput"
+              name="authorInput"
+              placeholder="Enter book title or author"
+            />
+          </div>
+          <div class="form-group">
+            <label for="search">Year:</label>
+            <input
+              type="number"
+              id="yearInput"
+              name="yearInput"
+              placeholder="Enter book title or author"
+            />
+          </div>
+          <button type="submit">Add book</button>
+        </fieldset>
+      </form>
+
+      <table class="book-list">
+        <caption>Book List</caption>
+        <thead>
+          <!-- <tr> -->
+            <th>N/O</th>
+            <th>ISBN</th>
+            <th>Title</th>
+            <th>Author</th>
+            <th>Year</th>
+            <th>Actions</th>
+          <!-- </tr> -->
+        </thead>
+        <tbody id="bookList">
+          <!-- Book entries will be dynamically added here -->
+        </tbody>
+
+      </table>
+    </div>
+  </body>
+</html>
